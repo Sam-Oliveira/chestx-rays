@@ -1,6 +1,6 @@
-# Cyclic Joint Representations for Diagnostic Images and Text (Deep Learning)
+# Clinical Decision Support System using Deep Learning
 
-Medical image analysis has taken huge steps forward due to the emergence of practical machine learning algorithms based around the use of deep networks. However, the standard pipeline of medical image analysis involves a tedious process of human interpretation, sometimes with segmentation. Simple labelling is usually done, and this is fine, but does not scale well. Nor is it necessarily sustainable: when new imaging methods come along, one has to start from scratch again. The aim of this project is to generalise the principle of cycle-consistent training to provide a learning signal that can aid or regularise the learning of joint image/text representations. The project is done in collaboration with Third Eye Intelligence, and as part of our Y3 Group Project as Computational Bioengineering students at Imperial College London.
+The goal of this project is to create a deep learning model that aids clinical decision making, focusing on aiding the process of differential diagnosis. Given a chest X-Ray, the deep learning model will output similar chest x-rays that have distinct medical reports. This will provide the doctor with distinct diagnoses that could apply to the input. I am currently working on the Computer Vision Section of this project, building a Variational Auto-Encoder. The project is done in collaboration with Third Eye Intelligence. The project is done in collaboration with Third Eye Intelligence, and as part of our Y3 Group Project as Computational Bioengineering students at Imperial College London.
 
 This specific repo relates to the Computer Vision section of the project, with the initial goal of creating an AutoEncoder.
 
@@ -23,5 +23,9 @@ For 40% of data.
  <img width="270" alt="Screenshot 2022-02-24 at 15 19 31" src="https://user-images.githubusercontent.com/78087643/155575927-b884bb1f-50e4-4df2-b05e-80b244282835.png">
  
 The CNN has 2 convolutional layers + 1 Pooling Layer + 2 Transposed Convolutional Layers (Decoder).
+
+## Deeper Convolutional Auto-Encoder
+
+This CNN has 4 convolutional layers(intercalated with 4 Pooling Layers), followed by 3 Linear Fully connected Layers. The decoder part is a mirror of this, with 3 linear fully connected layers, followed by 4 Transposed Convolutional Layers.
 
  
